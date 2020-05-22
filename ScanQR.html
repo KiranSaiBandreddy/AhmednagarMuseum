@@ -214,7 +214,7 @@ html {
 	let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
 	scanner.addListener('scan', function (content) {
 		if(content=='swd1' || content=='swd2' || content=='swd3'){
-	window.location.href = content+".php";
+	window.location.href = content+".html";
 		}else{
 			alert('No Item for this Qr');
 		}
