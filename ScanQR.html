@@ -199,11 +199,13 @@ html {
 	<div class="con" >
 		<center>
 		<h1 style="font-family: Moderne Sans, sans-serif;color:#00CC00;position:relative;top:8px;font-size:30px;">Scan QR</h1>
-		<video id="preview"></video>
+		<div class="disc" style="border: 1px solid black;text-align: left;background-color:white; ">
+			<video id="preview"></video>
+		</div>
 			<br><br>
-			<button  class="btn b1"  style="background-color:#00CC00;"  onclick="document.location.href = 'swd3.html';"><i class="arw l" ></i></button>
+			<button  class="btn b1"  style="background-color:#00CC00;"  onclick="document.location.href = 'Sword3.html';"><i class="arw l" ></i></button>
 			<button class="bbtn"  id="bck"  />Back</button>
-			<button class="btn b2"  style="background-color:#00CC00;"  onclick="document.location.href = 'swd1.html';"><i class="arw r"></i></button>
+			<button class="btn b2"  style="background-color:#00CC00;"  onclick="document.location.href = 'Sword1.html';"><i class="arw r"></i></button>
 			
 		</center>
 	</div>
@@ -213,7 +215,7 @@ html {
 <script type="text/javascript">
 	let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
 	scanner.addListener('scan', function (content) {
-		if(content=='swd1' || content=='swd2' || content=='swd3'){
+		if(content=='Sword1' || content=='Sword2' || content=='Sword3'){
 	window.location.href = content+".html";
 		}else{
 			alert('No Item for this Qr');
